@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+.header-section nav {
+    height: 70px;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-section ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+}
+.header-section ul li {
+    list-style: none;
+}
+.header-section .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.header-section .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color:rgb(0,0,0);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.header-section .menu-links {
+    display: flex;
+    gap: 60px;
+}
+.header-section .menu-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto Slab', serif;
+}
+.header-section .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: flex-end;
+}   
+.header-section .logo img {
+    width: 25px;
+    height: 25px;
+}
+
+ 
+
+/* Banner Section */
+.banner-section{
+    background-image: url('assets/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+}
+.banner-section .box {
+    max-width: 550px;
+    background-color: rgba(255, 105, 105, 0.474);
+    padding: 40px;
+    color: #ffffffc7;
+    padding: 40px 75px 40px 40px;
+}
+.banner-section .heading{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 3px;
+}
+.banner-section .content{
+    color: #ffffffc7;
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+
+
+/* Card Section */
+.food-card-section{
+    background-image: linear-gradient(90deg, rgb(255, 129, 255), rgb(255, 208, 79));
+    padding: 80px 0;
+    font-family:'Poppins', sans-serif;
+}
+.food-card-section .title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.food-card-section .cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 70px 0;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.food-card-section .card {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 50px;
+    text-align: center;
+}
+.food-card-section .card:hover{
+    scale: 1.07;
+    transition: .15s ease-in-out;
+}
+.food-card-section .card .img-outer-div{
+    width: 100%;
+    height: 260px;
+    margin-bottom: 16px;
+}
+.food-card-section .card .img-outer-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 40px;
+}
+.food-card-section .card .card-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.food-card-section .card .card-content{
+    font-size: 16px;
+}
+.food-card-section .order-btn{
+    text-align: center;
+}
+.food-card-section .order-btn .btn{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    padding: 15px 60px;
+    border-radius: 40px;
+    text-decoration: none;
+    background-color: #ffffff70;
+}
+
+
+/* @media (max-width:1024px){
+    .banner-section .box{
+        max-width: 50%;
+    }
+} */
+@media (max-width:900px){
+    .header-section .menu-icon{
+        display: block;
+    }
+    .header-section nav{
+        position: relative;
+    }
+    .header-section .menu-links{
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 69px;
+        transition: 2s ease-in-out;
+    }
+    .header-section .menu-links.show{
+        display: block;
+    }
+    .header-section ul{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background-color: #fff;
+    }
+    .header-section .menu-links a{
+        display: block;
+        padding: 15px;
+    }
+
+    .banner-section{
+        height: 70vh;
+    }
+    .banner-section .box{
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width:767px){
+    .banner-section{
+        height: 50vh;
+    }
+    .banner-section .box{
+        padding: 20px;
+    }
+    .banner-section .heading{
+        font-size: 2rem;
+    }
+    .banner-section .content{
+        font-size: 1rem;
+    }
+
+    .food-card-section .title{
+        font-size: 2rem;
+    }
+}
